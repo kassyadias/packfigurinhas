@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pack Figurinhas Copa 2026 – Imprima em Casa e Feche o Álbum!</title>
+  <meta name="description" content="Pack completo de figurinhas da Copa 2026 para imprimir em casa. Sem sorte, sem duplicatas, sem gastar uma fortuna. Apenas R$ 14,90." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0e1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ===== DESIGN TOKENS – COPA 2026 / BRASIL ===== */
+    :root {
+      --verde:   #009C3B;
+      --verde2:  #00b843;
+      --amarelo: #FFDF00;
+      --azul:    #002776;
+      --azul2:   #0038a8;
+      --vermelho:#C8102E;
+      --branco:  #ffffff;
+      --cinza:   #f5f5f5;
+      --dark:    #0a0e1a;
+      --dark2:   #111827;
+      --shadow:  rgba(0,0,0,0.4);
+      --radius:  14px;
+    }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+    .highlight { color: var(--amarelo); }
+    .highlight-green { color: var(--verde2); }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .bar {
+      background: var(--verde);
+      overflow: hidden;
+      padding: 10px 0;
+      white-space: nowrap;
+    }
+    .bar-inner {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+    .bar-inner span {
+      display: inline-block;
+      margin: 0 40px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--amarelo);
+    }
+    .bar-inner span::before { content: "⚽ "; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--azul) 0%, #001a55 40%, var(--verde) 100%);
+      padding: 70px 20px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='28' fill='none' stroke='rgba(255,223,0,0.06)' stroke-width='2'/%3E%3Cline x1='2' y1='30' x2='58' y2='30' stroke='rgba(255,223,0,0.04)' stroke-width='1'/%3E%3Cline x1='30' y1='2' x2='30' y2='58' stroke='rgba(255,223,0,0.04)' stroke-width='1'/%3E%3C/svg%3E") repeat;
+      opacity: 0.8;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--amarelo);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 6px 20px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 8vw, 80px);
+      line-height: 1.0;
+      letter-spacing: 2px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .hero h1 .line-yellow { color: var(--amarelo); display: block; }
+    .hero h1 .line-white { color: #fff; display: block; }
+    .hero-sub {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: rgba(255,255,255,0.88);
+      max-width: 620px;
+      margin: 0 auto 34px;
+      line-height: 1.6;
+      position: relative;
+    }
+    .hero-sub strong { color: var(--amarelo); }
+
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--verde) 0%, var(--verde2) 100%);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 18px 44px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(0,156,59,0.5);
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+    .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 14px 40px rgba(0,156,59,0.6); }
+    .btn-primary::after { content: ' →'; }
+    .btn-yellow {
+      display: inline-block;
+      background: linear-gradient(135deg, #ffd600 0%, #ffea00 100%);
+      color: var(--azul);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 18px 44px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(255,214,0,0.45);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-yellow:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 14px 40px rgba(255,214,0,0.6); }
+    .btn-pulse { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 30px rgba(0,156,59,0.5); }
+      50% { box-shadow: 0 8px 45px rgba(0,156,59,0.85); }
+    }
+
+    .hero-guarantee {
+      margin-top: 18px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      position: relative;
+    }
+    .hero-guarantee span { color: var(--verde2); font-weight: 700; }
+
+    /* ===== HERO STATS ===== */
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 44px;
+      position: relative;
+    }
+    .stat-chip {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,223,0,0.2);
+      border-radius: 12px;
+      padding: 14px 22px;
+      text-align: center;
+      min-width: 120px;
+      backdrop-filter: blur(8px);
+    }
+    .stat-chip .num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: var(--amarelo);
+      line-height: 1;
+    }
+    .stat-chip .lbl { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ===== SECTION SHARED ===== */
+    section { padding: 70px 20px; }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(32px, 6vw, 56px);
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      max-width: 580px;
+      margin: 0 auto 44px;
+      line-height: 1.7;
+    }
+
+    /* ===== PROBLEMA ===== */
+    .problema { background: var(--dark2); }
+    .problema-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 44px;
+    }
+    .problema-card {
+      background: rgba(200,16,46,0.12);
+      border: 1px solid rgba(200,16,46,0.3);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .problema-card .icon { font-size: 36px; margin-bottom: 12px; }
+    .problema-card h3 { font-size: 15px; font-weight: 800; color: #ff6b7a; margin-bottom: 8px; }
+    .problema-card p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+    .problema-solucao {
+      background: linear-gradient(135deg, rgba(0,156,59,0.15), rgba(0,39,118,0.15));
+      border: 1px solid rgba(0,184,67,0.3);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+    .problema-solucao p { font-size: 18px; line-height: 1.7; }
+    .problema-solucao strong { color: var(--amarelo); }
+
+    /* ===== BENEFICIOS ===== */
+    .beneficios { background: #0d1220; }
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .ben-card {
+      background: linear-gradient(145deg, rgba(0,39,118,0.4), rgba(0,156,59,0.15));
+      border: 1px solid rgba(255,223,0,0.15);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: transform .2s, border-color .2s;
+    }
+    .ben-card:hover { transform: translateY(-4px); border-color: rgba(255,223,0,0.4); }
+    .ben-icon { font-size: 40px; margin-bottom: 14px; }
+    .ben-card h3 { font-size: 17px; font-weight: 800; color: var(--amarelo); margin-bottom: 8px; }
+    .ben-card p { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+    /* ===== DEPOIMENTOS ===== */
+    .depoimentos { background: var(--azul); }
+    .dep-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+    .dep-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+    .dep-stars { color: var(--amarelo); font-size: 18px; margin-bottom: 12px; }
+    .dep-text { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.88); margin-bottom: 16px; font-style: italic; }
+    .dep-author { display: flex; align-items: center; gap: 12px; }
+    .dep-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--verde), var(--azul2));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 16px; color: #fff; flex-shrink: 0;
+    }
+    .dep-name { font-weight: 700; font-size: 14px; }
+    .dep-time { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+    /* ===== O QUE ESTÁ INCLUSO ===== */
+    .incluso { background: #0a0e1a; }
+    .incluso-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      text-align: left;
+    }
+    .incluso-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: rgba(0,39,118,0.25);
+      border-left: 3px solid var(--verde);
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .incluso-list li .check { color: var(--verde2); font-size: 22px; flex-shrink: 0; margin-top: -2px; }
+
+    /* ===== PREÇO ===== */
+    .preco {
+      background: linear-gradient(135deg, var(--azul) 0%, #001a55 100%);
+      text-align: center;
+    }
+    .preco-box {
+      max-width: 520px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 2px solid rgba(255,223,0,0.35);
+      border-radius: 24px;
+      padding: 50px 40px;
+      position: relative;
+    }
+    .preco-badge {
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--vermelho);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 7px 28px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .preco-de {
+      font-size: 18px;
+      color: rgba(255,255,255,0.45);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+    .preco-por {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 80px;
+      color: var(--amarelo);
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+    .preco-por small { font-size: 32px; vertical-align: top; margin-top: 14px; display: inline-block; }
+    .preco-condicao {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 30px;
+    }
+    .preco-condicao strong { color: var(--verde2); }
+    .preco-includes {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    .preco-includes li {
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .preco-includes li::before { content: "✓"; color: var(--verde2); font-weight: 900; font-size: 16px; flex-shrink: 0; }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+    .trust-badge span { font-size: 18px; }
+
+    /* ===== FAQ ===== */
+    .faq { background: var(--dark2); }
+    .faq-list { max-width: 680px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 6px 0; }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 18px 10px 18px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-q .arrow { color: var(--amarelo); font-size: 20px; transition: transform .3s; flex-shrink: 0; }
+    .faq-item.open .faq-q .arrow { transform: rotate(45deg); }
+    .faq-a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.75;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 10px;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 10px 18px; }
+
+    /* ===== FOOTER CTA ===== */
+    .footer-cta {
+      background: linear-gradient(135deg, var(--verde) 0%, #005a20 100%);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .footer-cta .section-title { color: #fff; }
+    .footer-cta .section-sub { color: rgba(255,255,255,0.8); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #06080f;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.8;
+    }
+    footer a { color: rgba(255,255,255,0.4); }
+
+    /* ===== STICKY BAR ===== */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(90deg, var(--azul), #001a55);
+      border-top: 2px solid var(--amarelo);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+    .sticky-bar p { font-size: 14px; font-weight: 700; }
+    .sticky-bar .price { color: var(--amarelo); font-size: 20px; font-family: 'Bebas Neue', sans-serif; }
+    .sticky-bar .btn-primary { padding: 12px 30px; font-size: 15px; }
+
+    /* ===== NOTIFICAÇÃO ===== */
+    .notif {
+      position: fixed;
+      bottom: 80px; left: 20px;
+      background: #1a2235;
+      border: 1px solid rgba(255,223,0,0.2);
+      border-left: 4px solid var(--verde);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      z-index: 998;
+      opacity: 0;
+      transform: translateX(-120%);
+      transition: all 0.5s;
+      max-width: 280px;
+    }
+    .notif.show { opacity: 1; transform: translateX(0); }
+    .notif .icon { font-size: 22px; flex-shrink: 0; }
+    .notif strong { color: var(--verde2); }
+    .notif span { color: rgba(255,255,255,0.6); font-size: 12px; display: block; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .preco-box { padding: 44px 24px; }
+      .preco-por { font-size: 64px; }
+      .sticky-bar { gap: 10px; }
+      .sticky-bar p { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="bar">
+  <div class="bar-inner" id="ticker">
+    <span>900 figurinhas</span>
+    <span>48 seleções completas</span>
+    <span>Imprima em casa</span>
+    <span>Sem duplicatas</span>
+    <span>Alta resolução alta resolução</span>
+    <span>Acesso imediato</span>
+    <span>Garantia de 7 dias</span>
+    <span>Apenas R$ 14,90</span>
+    <span>900 figurinhas</span>
+    <span>48 seleções completas</span>
+    <span>Imprima em casa</span>
+    <span>Sem duplicatas</span>
+    <span>Alta resolução alta resolução</span>
+    <span>Acesso imediato</span>
+    <span>Garantia de 7 dias</span>
+    <span>Apenas R$ 14,90</span>
+  </div>
+</div>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">⚽ Copa 2026 · Brasil · EUA · Canadá · México</div>
+    <h1>
+      <span class="line-yellow">Figurinhas da Copa 2026</span>
+      <span class="line-white">Imprima em Casa &amp;</span>
+      <span class="line-yellow">Feche o Álbum de Uma Vez</span>
+    </h1>
+    <p class="hero-sub">
+      Chega de gastar rios de dinheiro em envelopes.<br />
+      Com o nosso pack você tem <strong>todas as seleções completas</strong>,
+      em alta resolução, prontas para imprimir agora mesmo — sem sorte, sem espera.
+    </p>
+    <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-primary btn-pulse">QUERO MEU PACK AGORA</a>
+    <p class="hero-guarantee">🔒 <span>Garantia de 7 dias</span> · Acesso imediato após o pagamento</p>
+
+    <div class="hero-stats">
+      <div class="stat-chip">
+        <div class="num">900</div>
+        <div class="lbl">Figurinhas</div>
+      </div>
+      <div class="stat-chip">
+        <div class="num">48</div>
+        <div class="lbl">Seleções</div>
+      </div>
+      <div class="stat-chip">
+        <div class="num" style="font-size:22px; margin-top:6px">ALTA</div>
+        <div class="lbl">Resolução</div>
+      </div>
+      <div class="stat-chip">
+        <div class="num">14,90</div>
+        <div class="lbl">R$ uma vez</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= PROBLEMA ======= -->
+<section class="problema">
+  <div class="container text-center">
+    <h2 class="section-title">Você Conhece Essa <span class="highlight">Dor</span>, Né?</h2>
+    <p class="section-sub">Completar o álbum do jeito tradicional virou um pesadelo <strong style="color:#ff6b7a">(e um rombo no bolso)</strong></p>
+
+    <div class="problema-grid">
+      <div class="problema-card">
+        <div class="icon">💸</div>
+        <h3>Gasto sem fim</h3>
+        <p>Envelope atrás de envelope e ainda faltam as mesmas figurinhas</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">😤</div>
+        <h3>Duplicatas de sobra</h3>
+        <p>Messi pela 12ª vez, mas cadê aquela figurinha que você precisa?</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">⏳</div>
+        <h3>Tempo perdido</h3>
+        <p>Filas em papelaria, espera pelo correio, trocas que nunca fecham</p>
+      </div>
+      <div class="problema-card">
+        <div class="icon">😢</div>
+        <h3>Filho frustrado</h3>
+        <p>A criança quer completar mas o álbum fica sempre pela metade</p>
+      </div>
+    </div>
+
+    <div class="problema-solucao">
+      <p>E se você pudesse <strong>baixar todas as seleções completas</strong>, imprimir em casa na hora que quiser e fechar o álbum de uma vez? <strong>Agora você pode — por apenas R$ 14,90.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 1 -->
+<div style="background:#0d1220; padding:0 20px 50px; text-align:center;">
+  <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-primary">⚽ QUERO MEU PACK POR R$ 14,90</a>
+  <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,0.45);">🔒 Acesso imediato · Garantia de 7 dias</p>
+</div>
+
+<!-- ======= BENEFÍCIOS ======= -->
+<section class="beneficios">
+  <div class="container text-center">
+    <h2 class="section-title">Por Que o Nosso Pack <span class="highlight">Vale Cada Centavo</span></h2>
+    <p class="section-sub">Tudo que você precisa para completar o álbum, sem complicação</p>
+
+    <div class="beneficios-grid">
+      <div class="ben-card">
+        <div class="ben-icon">📦</div>
+        <h3>Pack Completo</h3>
+        <p>900 figurinhas de todas as 48 seleções completas da Copa do Mundo 2026, organizadas por grupo e seleção.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🖨️</div>
+        <h3>Imprima Quantas Quiser</h3>
+        <p>Arquivo digital para imprimir em casa, no mercado ou em qualquer gráfica. Você decide.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🎯</div>
+        <h3>Sem Duplicatas</h3>
+        <p>Você escolhe exatamente quais figurinhas quer. Nada de gastar para ter a mesma coisa 10 vezes.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">⚡</div>
+        <h3>Acesso Imediato</h3>
+        <p>Pagou? Recebeu na hora. Sem esperar frete, sem atrasos, sem desculpa.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🔍</div>
+        <h3>Alta Resolução</h3>
+        <p>alta resolução para ficarem nítidas e bonitas como as originais. Ninguém vai notar a diferença.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-icon">🌍</div>
+        <h3>Todas as Seleções Completas</h3>
+        <p>Todos os jogadores de todas as 48 seleções — nenhum craque de fora, nenhuma página vazia no álbum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= DEPOIMENTOS ======= -->
+<section class="depoimentos">
+  <div class="container text-center">
+    <h2 class="section-title">Quem Comprou, <span class="highlight">Aprovou!</span></h2>
+    <p class="section-sub">Veja o que estão falando do pack depois de fechar o álbum</p>
+
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">"Meu filho estava com mais de 80 figurinhas faltando. Comprei o pack, imprimi em 20 minutinhos na gráfica aqui perto e ele fechou o álbum no mesmo dia. A carinha dele não tem preço! Gastei menos do que gastaria em 3 pacotinhos."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">C</div>
+          <div>
+            <div class="dep-name">Camila R.</div>
+            <div class="dep-time">2 dias atrás · São Paulo, SP</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">"Já tinha gastado uns R$120 em envelopes e ainda faltavam 60 figurinhas. Por R$ 14,90 baixei tudo, imprimi e acabou o problema. Qualidade excelente, fica igual ao original. Super recomendo!"</p>
+        <div class="dep-author">
+          <div class="dep-avatar">M</div>
+          <div>
+            <div class="dep-name">Marcos A.</div>
+            <div class="dep-time">4 dias atrás · Belo Horizonte, MG</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card">
+        <div class="dep-stars">★★★★★</div>
+        <p class="dep-text">"Comprei pra completar o álbum do meu sobrinho. O arquivo veio organizado por seleção, facilíssimo de encontrar quem faltava. Imprimi na impressora de casa mesmo e ficou ótimo. Ele amou! Vou indicar pra todo mundo."</p>
+        <div class="dep-author">
+          <div class="dep-avatar">J</div>
+          <div>
+            <div class="dep-name">Juliana S.</div>
+            <div class="dep-time">1 semana atrás · Curitiba, PR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2 -->
+<div style="background:var(--azul); padding:0 20px 50px; text-align:center;">
+  <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-yellow">⚽ QUERO MEU PACK POR R$ 14,90</a>
+  <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,0.45);">🔒 Acesso imediato · Garantia de 7 dias</p>
+</div>
+
+<!-- ======= O QUE ESTÁ INCLUSO ======= -->
+<section class="incluso">
+  <div class="container text-center">
+    <h2 class="section-title">O Que Você Recebe <span class="highlight">Hoje</span></h2>
+    <p class="section-sub">Tudo isso por apenas R$ 14,90</p>
+
+    <ul class="incluso-list">
+      <li><span class="check">✔</span> 900 figurinhas da Copa 2026 em alta resolução (alta resolução)</li>
+      <li><span class="check">✔</span> Todas as 48 seleções completas, organizadas por grupo</li>
+      <li><span class="check">✔</span> Seleção Brasileira completa com todos os convocados</li>
+      <li><span class="check">✔</span> Arquivo pronto para imprimir — sem precisar de nenhum programa especial</li>
+      <li><span class="check">✔</span> Figurinhas no tamanho exato do álbum oficial</li>
+      <li><span class="check">✔</span> Acesso vitalício — baixe quando e quantas vezes quiser</li>
+      <li><span class="check">✔</span> Atualizações inclusas — se o elenco mudar, você recebe a versão nova</li>
+      <li><span class="check">✔</span> Suporte por e-mail para te ajudar a imprimir</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA 3 -->
+<div style="background:#0a0e1a; padding:0 20px 50px; text-align:center;">
+  <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-primary">⚽ QUERO MEU PACK POR R$ 14,90</a>
+  <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,0.45);">🔒 Acesso imediato · Garantia de 7 dias</p>
+</div>
+
+<!-- ======= PREÇO ======= -->
+<section class="preco" id="comprar">
+  <div class="container text-center">
+    <h2 class="section-title">Feche o Álbum Sem <span class="highlight">Esvaziar o Bolso</span></h2>
+    <p class="section-sub">Investimento único, álbum completo pra sempre</p>
+
+    <div class="preco-box">
+      <div class="preco-badge">🔥 OFERTA ESPECIAL DE LANÇAMENTO</div>
+      <p class="preco-de">De R$ 49,90</p>
+      <div class="preco-por"><small>R$</small> 14,90</div>
+      <p class="preco-condicao"><strong>Pagamento único · Acesso vitalício</strong></p>
+
+      <ul class="preco-includes">
+        <li>900 figurinhas em alta resolução</li>
+        <li>48 seleções completas da Copa 2026</li>
+        <li>Seleção Brasileira completa</li>
+        <li>Arquivo pronto para imprimir</li>
+        <li>Tamanho oficial do álbum</li>
+        <li>Atualizações gratuitas</li>
+        <li>Garantia incondicional de 7 dias</li>
+      </ul>
+
+      <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-yellow" style="display:block; text-align:center;">
+        ⚽ QUERO MEU PACK POR R$ 14,90
+      </a>
+
+      <div class="trust-badges">
+        <div class="trust-badge"><span>🔒</span> Pagamento Seguro</div>
+        <div class="trust-badge"><span>🛡️</span> Dados Criptografados</div>
+        <div class="trust-badge"><span>↩️</span> Garantia 7 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section class="faq">
+  <div class="container text-center">
+    <h2 class="section-title">Dúvidas <span class="highlight">Frequentes</span></h2>
+    <p class="section-sub">Respondemos o que você quer saber antes de comprar</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Preciso de uma impressora especial?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Não! Qualquer impressora jato de tinta ou laser colorida funciona bem. Se preferir, leve o arquivo em um pen drive para imprimir na gráfica ou papelaria mais perto de você — costuma sair bem baratinho.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Como recebo o pack depois de comprar?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Na hora! Assim que o pagamento é confirmado você recebe um e-mail com o link para baixar o arquivo. É tudo digital — sem esperar frete nem nada do tipo.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          As figurinhas ficam do tamanho certo para o álbum?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Sim! Todas as figurinhas estão no tamanho padrão do álbum oficial da Copa 2026. O arquivo já vem pronto para imprimir, é só cortar e colar no lugar certo.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          E se convocarem jogadores novos? Vou ficar desatualizado?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Não se preocupe! Atualizações são gratuitas para quem já comprou. Se houver mudança nos elencos você receberá a versão atualizada sem pagar nada a mais.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          E se eu não gostar? Tem como pedir o dinheiro de volta?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Com toda a certeza. Se por qualquer motivo você não ficar satisfeito, basta enviar um e-mail em até 7 dias corridos após a compra e devolvemos 100% do valor — sem pergunta, sem burocracia.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Posso imprimir quantas cópias quiser?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-a">Sim! O pack é para uso pessoal e você pode imprimir quantas vezes precisar — ótimo para presentear família e amigos também.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER CTA ======= -->
+<section class="footer-cta">
+  <div class="container text-center">
+    <h2 class="section-title">Chega de Envelopes.<br /><span style="color:var(--amarelo)">Feche o Álbum de Uma Vez!</span></h2>
+    <p class="section-sub">900 figurinhas · 48 seleções completas · Acesso imediato · R$ 14,90</p>
+    <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-yellow" style="font-size:20px; padding:20px 52px;">
+      ⚽ QUERO MEU PACK R$ 14,90
+    </a>
+    <p style="margin-top:16px; font-size:13px; color:rgba(255,255,255,0.6);">🔒 Pagamento seguro · 🛡️ Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer>
+  <p>© 2026 Pack Figurinhas Copa — Produto Digital</p>
+  <p style="margin-top:8px; max-width:600px; margin-left:auto; margin-right:auto;">
+    Este é um produto digital independente. Não possui vínculo oficial com a FIFA, Panini ou qualquer entidade organizadora da Copa do Mundo 2026.
+  </p>
+</footer>
+
+<!-- ======= STICKY BAR ======= -->
+<div class="sticky-bar">
+  <p>⚽ Pack Figurinhas Copa 2026 &nbsp;·&nbsp; <span class="price">R$ 14,90</span></p>
+  <a href="https://pay.cakto.com.br/tsgmxm9_885992" class="btn-primary">GARANTIR AGORA</a>
+</div>
+
+<!-- ======= NOTIFICAÇÃO ======= -->
+<div class="notif" id="notif">
+  <div class="icon">🇧🇷</div>
+  <div>
+    <strong id="notif-city">Alguém de São Paulo</strong> acabou de comprar o pack!
+    <span>há poucos minutos</span>
+  </div>
+</div>
+
+<script>
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* Fake purchase notifications */
+  const cities = ['São Paulo, SP','Rio de Janeiro, RJ','Belo Horizonte, MG','Curitiba, PR','Porto Alegre, RS','Fortaleza, CE','Recife, PE','Salvador, BA','Manaus, AM','Brasília, DF','Campinas, SP','Florianópolis, SC'];
+  const notif = document.getElementById('notif');
+  const notifCity = document.getElementById('notif-city');
+  let idx = 0;
+  function showNotif() {
+    notifCity.textContent = 'Alguém de ' + cities[idx % cities.length];
+    idx++;
+    notif.classList.add('show');
+    setTimeout(() => notif.classList.remove('show'), 4000);
+  }
+  setTimeout(() => { showNotif(); setInterval(showNotif, 12000); }, 5000);
+
+  /* Duplicate ticker for seamless loop */
+  const ticker = document.getElementById('ticker');
+  ticker.innerHTML += ticker.innerHTML;
+</script>
+</body>
+</html>
